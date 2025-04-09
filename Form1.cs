@@ -13,6 +13,7 @@ namespace Topics_9_11_assignment_1
 {
     public partial class FormCalculator : Form
     {
+        string operation;
         public FormCalculator()
         {
             InitializeComponent();
@@ -23,6 +24,50 @@ namespace Topics_9_11_assignment_1
             double numOne, numTwo;
             numOne = Convert.ToDouble(txtNumOne.Text);
             numTwo = Convert.ToDouble(txtNumTwo.Text);
+            if (operation == "+")
+            {
+                lblAnswer.Text = (numOne + numTwo).ToString();
+            }
+            else if (operation == "-")
+            {
+                lblAnswer.Text = (numOne - numTwo).ToString();
+            }
+            else if (operation == "*")
+            {
+                lblAnswer.Text = (numOne * numTwo).ToString();
+            }
+            else if (operation == "/")
+            {
+                lblAnswer.Text = (numOne / numTwo).ToString();
+            }
+        }
+
+        private void btnPlus_Click(object sender, EventArgs e)
+        {
+            operation = "+";
+            lblOperator.Text = operation;
+
+        }
+
+        private void btnMinus_Click(object sender, EventArgs e)
+        {
+            operation = "-";
+        }
+
+        private void btnDivide_Click(object sender, EventArgs e)
+        {
+            operation = "/";
+        }
+
+        private void btnMultiply_Click(object sender, EventArgs e)
+        {
+            operation = "*";
+        }
+
+        private void FormCalculator_Load(object sender, EventArgs e)
+        {
+            operation = "";
+            lblOperator.Text = operation;
         }
 
         
