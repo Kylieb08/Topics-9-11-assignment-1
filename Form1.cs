@@ -52,16 +52,19 @@ namespace Topics_9_11_assignment_1
         private void btnMinus_Click(object sender, EventArgs e)
         {
             operation = "-";
+            lblOperator.Text = operation;
         }
 
         private void btnDivide_Click(object sender, EventArgs e)
         {
             operation = "/";
+            lblOperator.Text = operation;
         }
 
         private void btnMultiply_Click(object sender, EventArgs e)
         {
             operation = "*";
+            lblOperator.Text = operation;
         }
 
         private void FormCalculator_Load(object sender, EventArgs e)
